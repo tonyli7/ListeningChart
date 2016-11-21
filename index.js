@@ -27,7 +27,13 @@ var desc = ["111Bacon ipsum dolor amet drumstick porchetta kevin",
             "888Bacon ipsum dolor amet drumstick porchetta kevin",
             "999Bacon ipsum dolor amet drumstick porchetta kevin",
             "101010Bacon ipsum dolor amet drumstick porchetta kevin",
-            "111111Bacon ipsum dolor amet drumstick porchetta kevin"
+            "111111Bacon ipsum dolor amet drumstick porchetta kevin",
+            "121212Bacon ipsum dolor amet drumstick porchetta kevin",
+            "131313Bacon ipsum dolor amet drumstick porchetta kevin",
+            "141414Bacon ipsum dolor amet drumstick porchetta kevin",
+            "151515Bacon ipsum dolor amet drumstick porchetta kevin",
+            "161616Bacon ipsum dolor amet drumstick porchetta kevin"
+
           ]
 
 audio.play();
@@ -42,9 +48,35 @@ for (i = 0; i < tabs.length; i++ ){
     x = parseInt(this.id) - 1;
     text.innerHTML = desc[x];
   });
+  var tokens = tabs[i].value.split("-");
+  var raw_1 = parseInt(tokens[0]);
+  var raw_2 = parseInt(tokens[1]);
+  var min_1 = Math.floor(raw_1/60);
+  var sec_1 = raw_1%60;
+  if (sec_1 < 10){
+    sec_1 = "0"+sec_1;
+  }
+  var min_2 = Math.floor(raw_2/60);
+  var sec_2 = raw_2%60;
+  if (sec_2 < 10){
+    sec_2 = "0"+sec_2;
+  }
+
+  var time_stamp = ""+min_1+":"+sec_1+" - "+min_2+":"+sec_2
+  tabs[i].innerHTML = time_stamp;
 }
 
 var display = function(){
-  console.log(x)
-  text.innerHTML = desc[x];
+
+  for (i = 0; i < tabs.length; i++){
+
+    var toks = tabs[i].value.split("-");
+    //console.log(parseFloat(toks[0]), audio.currentTime);
+    if (parseInt(toks[0]) == Math.floor(audio.currentTime)){
+      text.innerHTML = desc[i];
+
+    }
+  }
 }
+
+var intervalID = setInterval(display,1)
