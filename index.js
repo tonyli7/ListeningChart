@@ -17,22 +17,20 @@ var text = document.getElementById("text");
 //console.log($(tabs[0]).attr('aria-expanded'));
 //tabs[1].click();
 
-var desc = ["111Bacon ipsum dolor amet drumstick porchetta kevin",
-            "222Bacon ipsum dolor amet drumstick porchetta kevin",
-            "333Bacon ipsum dolor amet drumstick porchetta kevin",
-            "444Bacon ipsum dolor amet drumstick porchetta kevin",
-            "555Bacon ipsum dolor amet drumstick porchetta kevin",
-            "666Bacon ipsum dolor amet drumstick porchetta kevin",
-            "777Bacon ipsum dolor amet drumstick porchetta kevin",
-            "888Bacon ipsum dolor amet drumstick porchetta kevin",
-            "999Bacon ipsum dolor amet drumstick porchetta kevin",
-            "101010Bacon ipsum dolor amet drumstick porchetta kevin",
-            "111111Bacon ipsum dolor amet drumstick porchetta kevin",
-            "121212Bacon ipsum dolor amet drumstick porchetta kevin",
-            "131313Bacon ipsum dolor amet drumstick porchetta kevin",
-            "141414Bacon ipsum dolor amet drumstick porchetta kevin",
-            "151515Bacon ipsum dolor amet drumstick porchetta kevin",
-            "161616Bacon ipsum dolor amet drumstick porchetta kevin"
+var desc = ["Starts off with solo violin playing main theme. Sounds like grief.",
+            "Transitions to next section using rapid increases in pitch",
+            "Orchestra begins to play main theme",
+            "Transition again. Looks like a stock market graph with its ups and downs.",
+            "Woodwind starts to play the lighter and gentler second theme . It will be followed by a solo violin.",
+            "Mood lifts like skipping sheep. The first and second themes are combined. Violin becomes more virtuosic",
+            "Combined theme is repeated.",
+            "Orchestra is brought in to transition.",
+            "Solo violin plays the theme again at lower dynamics as if the griefing turned into a lament.",
+            "Orchestra builds up in preparation for cadenza",
+            "Cadenza",
+            "Orchestra begins to play main theme with violin arpeggios in the background making the melody more frillish.",
+            "The second theme is played once again (woodwind followed by solo violin).",
+            "Both themes are played with faster tempos. Ends with cadence.",
 
           ]
 
@@ -63,13 +61,12 @@ for (i = 0; i < tabs.length; i++ ){
   }
 
   var time_stamp = ""+min_1+":"+sec_1+" - "+min_2+":"+sec_2
-  tabs[i].innerHTML = time_stamp;
+  tabs[i].innerHTML += time_stamp;
 }
 
 var display = function(){
 
   for (i = 0; i < tabs.length; i++){
-
     var toks = tabs[i].value.split("-");
     //console.log(parseFloat(toks[0]), audio.currentTime);
     if (parseInt(toks[0]) == Math.floor(audio.currentTime)){

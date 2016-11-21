@@ -4,28 +4,41 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<title>
+  Tony Li
+</title>
+<head>
+  <h1><center>Mendelssohn</h1> <br>
+  <h2><center>Violin Concerto in E Minor</h2>
+</head>
 
+<body>
+  <div class="music">
+  <audio controls id="track01">
+    <source src="music_files/track01.mp3" type="audio/mpeg">
+  </audio>
+  </div>
+  <br>
 
-<audio controls id="track01">
-  <source src="music_files/track01.mp3" type="audio/mpeg">
-</audio>
+  <p id="text"></p>
+  <div class="buttons">
+    <button type="button" class="btn btn-danger" value="3-33" id="1"><h4>Exposition begins</h4> </button>
+    <button type="button" class="btn btn-danger" value="34-60" id="2"></button>
+    <button type="button" class="btn btn-danger" value="61-91" id="3"></button>
+    <button type="button" class="btn btn-danger" value="92-176" id="4"></button>
+    <button type="button" class="btn btn-danger" value="176-255" id="5"></button>
+    <button type="button" class="btn btn-danger" value="256-329" id="6"><h4>Development begins</h4></button>
+    <button type="button" class="btn btn-danger" value="330-364" id="7"></button>
+    <button type="button" class="btn btn-danger" value="365-372" id="8"></button>
+    <button type="button" class="btn btn-danger" value="373-418" id="9"></button>
+    <button type="button" class="btn btn-danger" value="419-430" id="10"></button>
+    <button type="button" class="btn btn-danger" value="431-528" id="11"><h4>Cadenza</h4></button>
+    <button type="button" class="btn btn-danger" value="529-560" id="12"><h4>Recapitulation begins</h4></button>
+    <button type="button" class="btn btn-danger" value="561-652" id="13"></button>
+    <button type="button" class="btn btn-danger" value="653-785" id="14"><h4>Coda</h4></button>
 
-<button type="button" class="btn btn-info" value="3-33" id="1">Simple collapsible</button>
-<button type="button" class="btn btn-info" value="34-60" id="2">Simple collapsible</button>
-<button type="button" class="btn btn-info" value="61-91" id="3">Simple collapsible</button>
-<button type="button" class="btn btn-info" value="92-155" id="4">Simple collapsible</button>
-<button type="button" class="btn btn-info" value="156-255" id="5">Simple collapsible</button>
-<button type="button" class="btn btn-info" value="256-329" id="6">Simple collapsible</button>
-<button type="button" class="btn btn-info" value="330-364" id="7">Simple collapsible</button>
-<button type="button" class="btn btn-info" value="365-372" id="8">Simple collapsible</button>
-<button type="button" class="btn btn-info" value="373-418" id="9">Simple collapsible</button>
-<button type="button" class="btn btn-info" value="419-430" id="10">Simple collapsible</button>
-<button type="button" class="btn btn-info" value="431-488" id="12">Simple collapsible</button>
-<button type="button" class="btn btn-info" value="489-528" id="13">Simple collapsible</button>
-<button type="button" class="btn btn-info" value="529-560" id="14">Simple collapsible</button>
-<button type="button" class="btn btn-info" value="561-652" id="15">Simple collapsible</button>
-<button type="button" class="btn btn-info" value="653-785" id="16">Simple collapsible</button>
+  </div>
 
-
-<p id="text"></p>
-<script src="index.js"></script>
+  <script src="index.js"></script>
+</body>
